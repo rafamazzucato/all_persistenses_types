@@ -1,3 +1,4 @@
+import 'package:all_persistenses_types/sqlite/addPerson.dart';
 import 'package:all_persistenses_types/sqlite/daos/PersonDao.dart';
 import 'package:all_persistenses_types/sqlite/models/Person.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +31,17 @@ class _ListPersonState extends State<ListPerson> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: widget.title),
+      appBar: AppBar(
+        title: widget.title,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.add),
+            onPressed: (){
+              Navigator.push(context, 
+                MaterialPageRoute(builder: (context) => AddPerson()));
+            })
+        ],
+        ),
       body: ListView(children: buildListItems()),
     );
   }
