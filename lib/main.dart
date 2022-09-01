@@ -1,3 +1,4 @@
+import 'package:all_persistenses_types/nosql/listBook.dart';
 import 'package:all_persistenses_types/screens/home.dart';
 import 'package:all_persistenses_types/sqlite/listPerson.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       routes: {
        "/" : (context) => const Home(),
        "/person" : (context) => const ListPerson(),
+       "/book" : (context) => const ListBook(),
       },
     );
   }
