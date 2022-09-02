@@ -1,3 +1,4 @@
+import 'package:all_persistenses_types/firebase/listCars.dart';
 import 'package:all_persistenses_types/nosql/listBook.dart';
 import 'package:all_persistenses_types/screens/home.dart';
 import 'package:all_persistenses_types/sqlite/listPerson.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
        "/" : (context) => const Home(),
        "/person" : (context) => const ListPerson(),
        "/book" : (context) => const ListBook(),
+       "/car" : (context) => const ListCar(),
       },
     );
   }
